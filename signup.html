@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Signup Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #ffe5d9;
+      color: #000000;
+    }
+
+    header {
+      background-color: #f4acb7;
+      color: #000000;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .top-nav {
+      background-color: #6a040f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-left .logo {
+      height: 40px;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .nav-right input[type="text"] {
+      padding: 0.5rem;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    .nav-right button {
+      padding: 0.5rem 1rem;
+      background-color: #f4acb7;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .nav-right button:hover {
+      background-color: #f7c59f;
+    }
+
+    nav {
+      background: #ffcad4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: #6a040f;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #f7c59f;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      margin: 2rem auto;
+      min-height: 80vh;
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 900px;
+      background: #ffcad4;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      flex-direction: row;
+    }
+
+    .left {
+      background: linear-gradient(135deg, #f7c59f, #6a040f);
+      color: #fff;
+      flex: 1;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .left h2 {
+      margin-bottom: 20px;
+    }
+
+    .left p {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .left a {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 12px 24px;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .left a:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .right {
+      flex: 1;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right h2 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #333;
+      text-align: center;
+    }
+
+    .right input {
+      margin-bottom: 15px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .right button {
+      padding: 12px;
+      font-size: 16px;
+      background: #6a040f;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .right .socials {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .right .socials i {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left,
+      .right {
+        flex: none;
+        width: 100%;
+        padding: 30px 20px;
+      }
+
+      .left a {
+        font-size: 14px;
+      }
+    }
+
+    footer {
+      background-color: #f4acb7;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+
+  <!-- Updated Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/0b3c06e7e1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>NationInsight</h1>
+    <p>Your Trusted Source for National and Global News</p>
+  </header>
+
+  <nav class="top-nav">
+    <div class="nav-left">
+      <img src="logo.png" alt="NationInsight Logo" class="logo">
+    </div>
+    <div class="nav-right">
+      <input type="text" id="searchInput" placeholder="Search news...">
+      <button onclick="performSearch()">Search</button>
+      <button onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+  </nav>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="politics.html">About</a>
+    <a href="world.html">World</a>
+    <a href="sports.html">Sports</a>
+    <a href="technology.html">Technology</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="business.html">Business</a>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="left">
+        <h2>Come join us!</h2>
+        <p>We are so excited to have you here. If you haven't already, create an account to get access to exclusive offers, rewards, and discounts.</p>
+        <a href="#">Already have an account? Signin.</a>
+      </div>
+      <div class="right">
+        <h2>Signup</h2>
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <button>Signup</button>
+        <p style="text-align: center; margin: 15px 0;">or signup with</p>
+        <div class="socials">
+          <i class="fab fa-facebook" style="color: #52a3ee;"></i>
+          <i class="fab fa-google-plus-g" style="color: #ef2e19;"></i>
+          <i class="fab fa-linkedin" style="color: #2636e1;"></i>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NationInsight. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nation Insight - Trusted News Source</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      
+      background: #ffe5d9;
+      color: #000000;
+    }
+
+    header {
+      background-color: #f4acb7;
+      color: #000000;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .top-nav {
+  background-color: #6a040f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-left .logo {
+  height: 40px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-right input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.nav-right button {
+  padding: 0.5rem 1rem;
+  background-color: #f4acb7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-right button:hover {
+  background-color: #f7c59f;
+}
+
+
+    nav {
+      background: #ffcad4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: #6a040f;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #f7c59f;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .main-news, .sidebar-news {
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 0px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-item {
+  transition: transform 0.2s ease-in-out;
+}
+.news-item:hover {
+  transform: scale(1.02);
+}
+
+
+    .news-item h2 {
+      
+      font-size: 1.4rem;
+      color: #370617;
+      margin-bottom: 0.5rem;
+      text-align: justify;
+    }
+
+    .news-item p {
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    .news-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #f4acb7;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-right {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-right input, .nav-right button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>NationInsight</h1>
+    <p>Your Trusted Source for National and Global News</p>
+  </header>
+  <!-- Add this nav bar just after the header -->
+<nav class="top-nav">
+  <div class="nav-left">
+    <img src="logo.png" alt="NationInsight Logo" class="logo">
+  </div>
+  <div class="nav-right">
+    <input type="text" id="searchInput" placeholder="Search news...">
+    <button onclick="performSearch()">Search</button>
+    <button onclick="window.location.href='signup.html'">Sign Up</button>
+  </div>
+</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="world.html">World</a>
+    <a href="business.html">Business</a>
+    <a href="sports.html">Sports</a>
+    <a href="technology.html">Technology</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="politics.html">About</a>
+  </nav>
+
+  <main class="container">
+    <section class="main-news">
+        <div class="news-item">
+            <video controls width="100%" poster="video-thumbnail.jpg">
+              <source src="raja.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h2>Awadh Ojha sir Mativational Video-- Raja Banane Ki Quality</h2>
+            <p>Awadh Ojha sir Mativational Video-- Raja Banane Ki Quality. Awadh Ojha sir Mativational Video-- Raja Banane Ki Quality. Awadh Ojha sir Mativational Video-- Raja Banane Ki Quality</p><br>
+          </div>
+        <div class="news-item">
+            <video controls width="100%" poster="video-thumbnail.jpg">
+              <source src="videoplayback.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h2>RAID 2 (TRAILER): Ajay D | Riteish D | Vaani K | Raj K | Abhishek P | Kumar M | Bhushan K, Krishan K</h2>
+            <p>Chakravyu Rach Chuka Hai! Tyaar Ho Jao!" Presenting "RAID 2" Official Trailer, starring the Iconic cast Ajay Devgn, Riteish Deshmukh, Vaani Kapoor, Rajat Kapoor, Saurabh Shukla, Supriya Pathak, Amit Sial.</p><br>
+          </div>
+          <div class="news-item">
+            <video controls width="100%" poster="video-thumbnail.jpg">
+              <source src="videoplayback (1).mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h2>KESARI CHAPTER 2 - OFFICIAL TRAILER | Akshay Kumar | R. Madhavan | Ananya | Karan S Tyagi | 18 April</h2>
+            <p>Dharma Productions, Cape Of Good Films & Leo Media Collective present
+                A Dharma Productions Film
+                Kesari Chapter 2 - The Untold Story Of Jallianwala Bagh
+                Starring Akshay Kumar, R. Madhavan & Ananya Panday
+                Directed by Karan Singh Tyagi
+                Produced by Hiroo Yash Johar, Aruna Bhatia, Karan Johar, Adar Poonawalla, Apoorva Mehta, Amritpal Singh Bindra & Anand Tiwari
+                Co-Produced By Marijke deSouza, Somen Mishra, Vedant Baali
+                Written by Karan Singh Tyagi & Amritpal Singh Bindra</p><br>
+          </div>
+          <div class="news-item">
+            <video controls width="100%" poster="video-thumbnail.jpg">
+              <source src="videoplayback (2).mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h2>JAAT Trailer | Sunny Deol | Randeep Hooda | Viineet Kumar Siingh | Gopichand Malineni | Thaman S</h2>
+            <p>JAAT is an Upcoming 2025 Movie Starring Sunny Deol, Randeep Hooda, Viineet Kumar Siingh, Regina Cassandra, Saiyami Kher, Swarupa Ghosh & Others. Directed by Gopichand Malineni. Music by Thaman S. Produced by Naveen Yerneni, Ravi Shankar under Mythri Movie Makers & TG Vishwa Prasad under People Media Factory.</p><br>
+      <div class="news-item">
+        <img src="GROOM.jpg">
+        <h2>Who is Sambhav Jain, man who married Arvind Kejriwal's daughter Harshita?</h2>
+        <p>Arvind Kejriwal's daughter Harshita and now husband Sambhav met at the Indian Institute of Technology (Delhi), where they studied at the same time. Former Delhi chief minister Arvind Kejriwal's daughter Harshita tied the knot with her college friend Sambhav Jain on Friday, April 18. The lavish wedding ceremony was held at Delhi's Kapurthala House, the official residence of Punjab chief minister when he is in the capital. According to a report by The Mint, Harshita and Sambhav met at the Indian Institute of Technology (Delhi), where they studied at the same time. The couple got engaged at Delhi's five star hotel Shangri-La Eros.</p><br>
+      </div>
+      <div class="news-item">
+        <img src="jammu.png">
+        <h2>Tell this to Modi’: Pahalgam attack survivor reveals what terrorists told her after killing husband</h2>
+        <p>ounter terrorism operations have been launched in the area in response to the attack that officials believe killed at least 26 and injured many A woman survivor of the Pahalgam terror attack recounted chilling moments of the massacre and said that the attacker killed her husband but left her alive to send a message to Prime Minister Narendra Modi. “Go tell this to Modi,” the woman quoted the attacker as saying.</p><br>
+      </div>
+    </section>
+
+    <aside class="sidebar-news">
+      <div class="news-item">
+        <h2>Trending Now</h2>
+        <img src="modi.webp" alt="Education Policy">
+        <h2>PM Modi, Flying Back From Saudi After Pahalgam Attack, Skips Pak Airspace</h2>
+        <p>PM Modi, Flying Back From Saudi After Pahalgam Attack, Skips Pak AirspaceAmong the 26 killed in the attack was a Navy officer who was married a week ago and an Intelligence Bureau official shot dead in front of his wife.</p><br>
+      </div>
+      <div class="news-item">
+        <img src="India_Kashmir_Attack_29792.jpg" alt="Education Policy">
+        <h2>Terrorists cursed Modi, asked my father to recite Islamic verse before shooting him: Daughter</h2>
+        <p>
+          The family was cowering in fear inside a tent when terrorists came. They asked Santosh Jagdale, 54, to come out and recite an Islamic verse. When he couldn't, they shot him thrice: once in the head, then behind the ear and then his back.
+          </p><br>
+      </div>
+      <div class="news-item">
+        <img src="herald.avif" alt="Education Policy">
+        <h2>What is National Herald case</h2>
+        <p>
+          In 2012, Bharatiya Janata Party (BJP) leader and advocate Subramanian Swamy filed a complaint before a trial court alleging that some Congress leaders were involved in cheating and breach of trust in the acquisition of Associated Journals Ltd by Young Indian Ltd (YIL). He alleged that YIL had 'taken over' the assets of the National Herald in a 'malicious' way.
+
+Both Rahul Gandhi and Sonia Gandhi have been summoned by the ED in a probe related to the National Herald case. The ED is currently probing the shareholding pattern, the financial transactions of AJL and YIL, and the role of party functionaries in the functioning of the two entities.
+<b>Who has been named in the National Herald case by Subramanian Swamy?</b>Sonia Gandhi, Rahul Gandhi, Motilal Vora, Oscar Fernandes, journalist Suman Dubey and technocrat Sam Pitroda have been named in Swamy’s National Herald case.
+          </p>
+      </div>
+      <div class="news-item">
+        <img src="language.webp">
+        <h2>Maharashtra govt climbs down, Hindi now ‘optional’ for Classes 1 to 5</h2>
+        <p>
+          UNDER intense pressure from all sides over the issue, the Maharashtra government Tuesday rolled back its decision to make Hindi mandatory as the third language in Classes 1 to 5 across Marathi- and English-medium schools in the state.
+
+          “The word mandatory will be removed… The three-language formula remains, but schools must accommodate other language choices if a significant number of students in a class request it,” Maharashtra School Education Minister Dadaji Bhuse announced after a Cabinet meeting.
+          </p><br>
+      </div>
+      <div class="news-item">
+        <img src="download.jpg">
+        <h2>Kesari Chapter 2' Box Office Collection Day 6 (Live): Akshay Kumar, Ananya Panday starrer mints Rs 40 crore within a week</h2>
+        <p>
+          Kesari Chapter 2: The Untold Story of Jallianwala Bagh is a 2025 Indian Hindi-language historical courtroom drama film directed by Karan Singh Tyagi and produced by Dharma Productions, Leo Media Collective, and Cape of Good Films.[7][8] A spiritual sequel to Kesari (2019), the plot is based on the book The Case That Shook The Empire by Raghu Palat and Pushpa Palat, centred around C. Sankaran Nair and the 1919 Jallianwala Bagh massacre.[9] The film stars Akshay Kumar, R. Madhavan and Ananya Panday.[10][11] It was released on 18 April 2025, marking the 106th anniversary of the Jallianwala Bagh massacre.
+          </p><br>
+      </div>
+      <div class="news-item">
+        <img src="ghibli.webp">
+        <h2>Studio Ghibli-Inspired AI Art Trend Sparks Debate Over Ethics, Copyright</h2>
+        <p>
+          The issue extends beyond individual rights. It highlights the growing tension between human creativity and corporate profit. The recent surge of Studio Ghibli-inspired images generated by artificial intelligence has reignited a heated debate on the ethics of AI-generated art, raising critical concerns over copyright, artist consent, and the commercialization of creative work. The trend, which quickly gained momentum across social media platforms, showcased highly stylized artworks mimicking the signature aesthetics of the renowned Japanese animation studio. While visually compelling, these images have prompted widespread backlash from artists and creatives who argue that such tools rely heavily on artwork scraped from the internet—often without consent or credit to the original creators.
+          </p><br>
+      </div>
+    </aside>
+  </main>
+  <footer>
+    <p>&copy; 2025 NationInsight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function performSearch() {
+    const query = document.getElementById('searchInput').value;
+    alert(`Search for: ${query}`);
+    // Later, you can implement real search logic with backend/API
+  }
+
+  </script>
+</body>
+
+</html>

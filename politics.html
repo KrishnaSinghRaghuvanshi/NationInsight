@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nation Insight - Trusted News Source</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffe5d9;
+      color: #000000;
+    }
+
+    header {
+      background-color: #f4acb7;
+      color: #000000;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .top-nav {
+      background-color: #6a040f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-left .logo {
+      height: 40px;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .nav-right input[type="text"] {
+      padding: 0.5rem;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    .nav-right button {
+      padding: 0.5rem 1rem;
+      background-color: #f4acb7;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .nav-right button:hover {
+      background-color: #f7c59f;
+    }
+
+    nav {
+      background: #ffcad4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: #6a040f;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background: #f7c59f;
+    }
+
+    /* CEO Message Section */
+    .ceo-section {
+      background-color: #fbe3dc;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 900px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .ceo-image {
+      flex: 1 1 250px;
+      max-width: 250px;
+    }
+
+    .ceo-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .ceo-content {
+      flex: 2 1 500px;
+    }
+
+    .ceo-content h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .ceo-content h3 {
+      color: #d00000;
+      margin-bottom: 0.75rem;
+    }
+
+    .ceo-content p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .ceo-content strong {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    footer {
+      background-color: #f4acb7;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-right {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-right input,
+      .nav-right button {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+
+      .ceo-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .ceo-content {
+        text-align: left;
+      }
+
+      .ceo-image {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>NationInsight</h1>
+    <p>Your Trusted Source for National and Global News</p>
+  </header>
+
+  <!-- Nav Bar -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <img src="logo.png" alt="NationInsight Logo" class="logo" />
+    </div>
+    <div class="nav-right">
+      <input type="text" id="searchInput" placeholder="Search news..." />
+      <button onclick="performSearch()">Search</button>
+      <button onclick="window.location.href='signup.html'">Sign Up</button>
+    </div>
+  </nav>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="world.html">World</a>
+    <a href="business.html">Business</a>
+    <a href="sports.html">Sports</a>
+    <a href="technology.html">Technology</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="politics.html">About</a>
+  </nav>
+
+  <!-- CEO Message Section -->
+  <section class="ceo-section">
+    <div class="ceo-image">
+      <img src="ceo.jpg" alt="CEO Image" />
+    </div>
+    <div class="ceo-content">
+      <h2>MESSAGE FROM OUR CEO</h2>
+      <h3>TO OUR READERS</h3>
+      <p><b>NationInsight™</b> is a dynamic news and politics platform designed to deliver up-to-date, 
+        accurate, and in-depth analysis of current events. It offers users a seamless experience in 
+        browsing articles, exploring various topics, and engaging with expert opinions, providing a 
+        comprehensive view of national and global affairs. 
+        Key features of <b>NationInsight™</b> include user authentication for personalized experiences, 
+        advanced search capabilities for finding specific topics, a commenting system for user 
+        engagement and feedback, and an admin panel for managing articles, users, and site content. 
+        The platform also integrates secure systems to ensure data privacy and protect user information. </p>
+      <p>⚖️ Legal Notice
+        <b>NationInsight™</b> and its logo are registered trademarks under applicable intellectual property laws. All content, including text, design, layout, logos, product listings, and domain name, is the exclusive property of <b>NationInsight™</b> and is protected under the <b>Copyright Act, 1957,</b> and the <b>Trade Marks Act, 1999</b> of the <b>(भारत सरकार) Government of India.</b> Unauthorized use, reproduction, distribution, or imitation of any part of this website—including its name, content, or design—is strictly prohibited and may result in civil and criminal prosecution under Indian law. We reserve the right to take strict legal action against individuals or organizations found infringing upon our intellectual property. Your cooperation in maintaining a fair and respectful digital ecosystem is appreciated.</p>
+      <strong>Mr. Krishna Vijay Mishra</strong>
+      <p>CEO & Founder <span style="text-decoration: none;">NationInsight Pvt. Ltd.</span></p>
+      <div class="social-icons">
+        <img src="Facebook_Logo_2023.png" alt="Facebook" />
+        <img src="Instagram_icon.png" alt="Instagram" />
+        <img src="WhatsApp_icon.png" alt="WhatsApp" />
+        <img src="x.png" alt="Email" />
+        <img src="Telegram_logo.svg.webp" alt="Telegram" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NationInsight. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function performSearch() {
+      const query = document.getElementById("searchInput").value;
+      alert(`Search for: ${query}`);
+      // Later, you can implement real search logic with backend/API
+    }
+  </script>
+</body>
+
+</html>
